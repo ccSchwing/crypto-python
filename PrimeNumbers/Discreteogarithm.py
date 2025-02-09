@@ -18,5 +18,6 @@ def modular_exponentiation(b, c, m):
 
 if __name__ == '__main__':
     # this is a good trapdoor-function (Diffie-Hellman algorithm)
-    print(modular_exponentiation(5, 948603, 9048610007))
-   # Slow! print(discrete_logarithm(3668993056, 5, 9048610007))
+    privateKey=modular_exponentiation(5, 948603, 9048610007)                ## b, c and m  returns c, the exponent
+    print("Private key %s" % privateKey)
+    #print(discrete_logarithm(3668993056, 5, 9048610007))             ## a,b m  3668993056 os the result of the modular exponentiation -- it's the exponent
